@@ -1,3 +1,4 @@
+#scrape Martha Stewart website for sandwich ingredients
 require 'nokogiri'
 require 'open-uri'
 
