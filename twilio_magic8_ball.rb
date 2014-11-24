@@ -22,6 +22,6 @@ answers = ['It is certain', 'It is decidedly so', 'Without a doubt', 'Yes defini
 message = @client.account.sms.messages.create(
 	:from => "(267) 460-6125",
 	:to => "(215) 808-4198",
-	:body => "#{answers[rand]}"
+	:body => "#{answers[rand(0) + 19]}"
 )
 puts message.to
