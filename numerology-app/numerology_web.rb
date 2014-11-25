@@ -41,6 +41,14 @@ end
 get '/:birthdate' do
 	birthdate = params[:birthdate] 
 	birth_path_number = get_birth_path_number(birthdate)
-	message = get_message(birth_path_number)
-	"#{message}"
+	@message = get_message(birth_path_number)
+	"#{@message}"
+	erb :home
+end
+
+#displays all messages
+get '/messages/' do
+	@messages = get_message(1), get_message(2), get_message(3), get_message(4), get_message(5), get_message(6), get_message(7), get_message(8), get_message(9), get_message(10)
+
+	erb :messages
 end
